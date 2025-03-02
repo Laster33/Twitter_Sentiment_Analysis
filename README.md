@@ -3,7 +3,7 @@
 
 Python tabanlı bu araç, Twitter verileri üzerinde Doğal Dil İşleme (NLP) kullanarak duygu analizi yapar ve görselleştirmeler oluşturur.
 
-![Duygu Analizi Sonuç Örneği](sentiment_analysis_results.png)
+![Duygu Analizi Sonuç Örneği](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
 ## Özellikler
 
