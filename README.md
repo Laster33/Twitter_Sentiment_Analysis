@@ -1,24 +1,24 @@
 ```markdown
-# Twitter Sentiment Analysis Tool
+# Twitter Duygu Analizi Aracı
 
-A Python-based tool for performing sentiment analysis on Twitter data using Natural Language Processing (NLP) and generating insightful visualizations.
+Python tabanlı bu araç, Twitter verileri üzerinde Doğal Dil İşleme (NLP) kullanarak duygu analizi yapar ve görselleştirmeler oluşturur.
 
-![Sentiment Analysis Results Example](sentiment_analysis_results.png)
+![Duygu Analizi Sonuç Örneği](sentiment_analysis_results.png)
 
-## Features
+## Özellikler
 
-- 🧠 Sentiment analysis using NLTK's VADER (Valence Aware Dictionary and sEntiment Reasoner)
-- 📊 Automatic generation of four different visualizations:
-  - Sentiment distribution pie chart
-  - Sentiment counts bar chart
-  - Compound score distribution histogram
-  - Average sentiment component scores bar plot
-- 📥 CSV input/output support
-- 📈 Detailed sentiment scoring (compound, positive, neutral, negative)
-- 📋 Automatic sentiment classification (positive/neutral/negative)
-- 🚀 Progress tracking during analysis
+- 🧠 NLTK'nın VADER (Valence Aware Dictionary and sEntiment Reasoner) ile duygu analizi
+- 📊 Otomatik 4 farklı görselleştirme:
+  - Duygu dağılımı pasta grafiği
+  - Duygu sayıları çubuk grafiği
+  - Bileşik skor dağılım histogramı
+  - Ortalama duygu bileşen skorları
+- 📥 CSV giriş/çıkış desteği
+- 📈 Detaylı duygu skorlaması (bileşik, pozitif, nötr, negatif)
+- 📋 Otomatik duygu sınıflandırması (pozitif/nötr/negatif)
+- 🚀 Analiz sırasında ilerleme takibi
 
-## Requirements
+## Gereksinimler
 
 - Python 3.x
 - pandas
@@ -26,83 +26,61 @@ A Python-based tool for performing sentiment analysis on Twitter data using Natu
 - matplotlib
 - seaborn
 
-## Installation
+## Kurulum
 
-1. Clone the repository:
+1. Depoyu klonlayın:
 ```bash
-git clone https://github.com/yourusername/twitter-sentiment-analysis.git
-cd twitter-sentiment-analysis
+git clone https://github.com/kullaniciadiniz/twitter-duygu-analizi.git
+cd twitter-duygu-analizi
 ```
 
-2. Install required packages:
+2. Gerekli paketleri yükleyin:
 ```bash
 pip install pandas nltk matplotlib seaborn
 ```
 
-3. Download NLTK VADER lexicon:
+3. NLTK VADER sözlüğünü indirin:
 ```bash
 python -c "import nltk; nltk.download('vader_lexicon')"
 ```
 
-## Usage
+## Kullanım
 
-### Basic Command Line Usage
+### Temel Komut Satırı Kullanımı
 ```bash
-python tweet_sentiment.py <input_csv_file> [text_column_name]
+python tweet_sentiment.py <giris_csv_dosyasi> [metin_sutun_adi]
 ```
 
-- `input_csv_file`: Path to CSV file containing tweets (required)
-- `text_column_name`: Name of column containing text (default: 'text')
+- `giris_csv_dosyasi`: Tweetlerin bulunduğu CSV dosyasının yolu (zorunlu)
+- `metin_sutun_adi`: Metin içeren sütunun adı (varsayılan: 'text')
 
-Example:
+Örnekler:
 ```bash
 python tweet_sentiment.py data.csv
 python tweet_sentiment.py data.csv text
 ```
 
-### Output
-The script will generate:
-1. A new CSV file with `_with_sentiment` suffix containing:
-   - Original data
-   - Four new columns: `compound`, `positive`, `neutral`, `negative`
-   - `sentiment` classification column
-2. `sentiment_analysis_results.png` with visualizations
+### Çıktılar
+Betik şunları oluşturacak:
+1. `_with_sentiment` ekli yeni bir CSV dosyası:
+   - Orijinal veri
+   - 4 yeni sütun: `compound`, `positive`, `neutral`, `negative`
+   - `sentiment` sınıflandırma sütunu
+2. Görselleştirmeleri içeren `sentiment_analysis_results.png`
 
-### Programmatic Usage
+### Programatik Kullanım
 ```python
 from tweet_sentiment import analyze_tweet_sentiment, visualize_sentiment
 
-# Analyze tweets
-df = analyze_tweet_sentiment("tweets.csv", text_column="text")
+# Tweetleri analiz et
+df = analyze_tweet_sentiment("tweetler.csv", text_column="text")
 
-# Generate visualizations
+# Görselleştirmeleri oluştur
 if df is not None:
     visualize_sentiment(df)
 ```
 
-## Sentiment Classification
-- **Positive**: Compound score ≥ 0.05
-- **Neutral**: Compound score between -0.05 and 0.05
-- **Negative**: Compound score ≤ -0.05
-
-## File Structure
-```
-twitter-sentiment-analysis/
-├── tweet_sentiment.py      # Main analysis script
-├── requirements.txt        # Dependencies
-├── README.md               # This file
-└── example_tweets.csv      # Sample dataset (optional)
-```
-
-## Contributing
-Contributions are welcome! Please open an issue to discuss proposed changes, or submit a pull request.
-
-## License
-MIT License
-
-## Acknowledgments
-- Uses NLTK's VADER sentiment analyzer: https://github.com/nltk/nltk
-- Built with pandas, matplotlib, and seaborn
-``` 
-
-Copy-paste this directly into your `README.md` file. Formatting is preserved for GitHub Markdown rendering.
+## Duygu Sınıflandırma Kriterleri
+- **Pozitif**: Bileşik skor ≥ 0.05
+- **Nötr**: Bileşik skor -0.05 ile 0.05 arası
+- **Negatif**: Bileşik skor ≤ -0.05
