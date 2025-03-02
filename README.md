@@ -26,20 +26,9 @@ Python tabanlı bu araç, Twitter verileri üzerinde Doğal Dil İşleme (NLP) k
 
 ## Kurulum
 
-1. Depoyu klonlayın:
-```bash
-git clone https://github.com/kullaniciadiniz/twitter-duygu-analizi.git
-cd twitter-duygu-analizi
-```
-
-2. Gerekli paketleri yükleyin:
+1. Gerekli paketleri yükleyin:
 ```bash
 pip install pandas nltk matplotlib seaborn
-```
-
-3. NLTK VADER sözlüğünü indirin:
-```bash
-python -c "import nltk; nltk.download('vader_lexicon')"
 ```
 
 ## Kullanım
