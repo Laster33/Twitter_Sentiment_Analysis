@@ -56,8 +56,8 @@ python tweet_sentiment.py <input_csv_file> [text_column_name]
 
 Example:
 ```bash
-python tweet_sentiment.py tweets.csv
-python tweet_sentiment.py tweets.csv tweet_text
+python tweet_sentiment.py data.csv
+python tweet_sentiment.py data.csv text
 ```
 
 ### Output
