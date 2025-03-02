@@ -3,9 +3,6 @@
 
 Python tabanlı bu araç, Twitter verileri üzerinde Doğal Dil İşleme (NLP) kullanarak duygu analizi yapar ve görselleştirmeler oluşturur.
 
-![sentiment_analysis_results](https://github.com/user-attachments/assets/5a2b41b1-c89a-46fd-bca8-c32b5e2f8925)
-
-
 ## Özellikler
 
 - 🧠 NLTK'nın VADER (Valence Aware Dictionary and sEntiment Reasoner) ile duygu analizi
